@@ -2,11 +2,14 @@ window.addEventListener('load',init,false);
 window.addEventListener('keydown', key, false);
 
 function init(){
+s=document.getElementById("button");
+s.addEventListener("click",ss,false);
 
+frame = 200;
 	bx=0;
 	by=0;
 	bh=bw=50;
-	bxs=bys=5;
+	bxs=bys=2;
 
 	px=400;
 	py=500;
@@ -33,7 +36,7 @@ collide(bx,px,by,py,bw,pw);
 	//reqAnimFrame = window.mozRequestAnimationFrame    ||window.webkitRequestAnimationFrame ||   window.msRequestAnimationFrame   ||  window.oRequestAnimationFrame;
 
 	//reqAnimFrame(run);
-	setTimeout(run,17);
+	setTimeout(run,frame);
 }
 
 function ball_ai(){
@@ -102,4 +105,8 @@ function paint(){
 	ctx.fillRect(px,py,pw,ph);
 
 
+}
+
+function ss(){
+frame = prompt("frame","frame");
 }
