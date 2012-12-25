@@ -30,9 +30,10 @@ function run(){
 collide(bx,px,by,py,bw,pw);
 	paint();
 
-	reqAnimFrame = window.mozRequestAnimationFrame    ||window.webkitRequestAnimationFrame ||   window.msRequestAnimationFrame   ||  window.oRequestAnimationFrame;
+	//reqAnimFrame = window.mozRequestAnimationFrame    ||window.webkitRequestAnimationFrame ||   window.msRequestAnimationFrame   ||  window.oRequestAnimationFrame;
 
-	reqAnimFrame(run);
+	//reqAnimFrame(run);
+	setTimeout(run,17);
 }
 
 function ball_ai(){
