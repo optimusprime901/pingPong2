@@ -1,4 +1,3 @@
-
 <html>
 <head>
     <!-- fill iPhone screen with canvas -->
@@ -11,9 +10,11 @@
             can = document.getElementById("can");
             ctx = can.getContext("2d");
  
-            window.addEventListener("touchstart", touchDown, false);
-            window.addEventListener("touchmove", touchXY, true);
-            window.addEventListener("touchend", touchUp, false);
+            can.addEventListener("mousedown", mouseDown, false);
+            can.addEventListener("mousemove", mouseXY, false);
+            can.addEventListener("touchstart", touchDown, false);
+            can.addEventListener("touchmove", touchXY, true);
+            can.addEventListener("touchend", touchUp, false);
  
             document.body.addEventListener("mouseup", mouseUp, false);
             document.body.addEventListener("touchcancel", touchUp, false);
@@ -83,10 +84,3 @@
     </canvas>
 </body>
 </html>
-<!-- Hosting24 Analytics Code -->
-<script type="text/javascript" src="http://stats.hosting24.com/count.php"></script>
-<!-- End Of Analytics Code -->
-
-<!-- Hosting24 Analytics Code -->
-<script type="text/javascript" src="http://stats.hosting24.com/count.php"></script>
-<!-- End Of Analytics Code -->
